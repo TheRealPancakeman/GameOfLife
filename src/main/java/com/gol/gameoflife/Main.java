@@ -75,18 +75,17 @@ public class Main extends GameApplication {
             down.setValue("Pixels moved Down: " + newV);
         });
          */
-
-
         player = FXGL.entityBuilder()
-                .at(0,0)
+                .at(100,100)
                 .view(new Rectangle(25,25, Color.BLUE))
                 .buildAndAttach();
 
-        xProp.setValue("X: ");
+        xProp.setValue("X: " + player.getX());
         player.xProperty().addListener((v,oldV,newV) ->{
             xProp.setValue("X: " + newV);
         });
-        yProp.setValue("Y: ");
+
+        yProp.setValue("Y: " + player.getY());
         player.yProperty().addListener((v,oldV,newV) ->{
             yProp.setValue("Y: " + newV);
         });
